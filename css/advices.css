@@ -1,0 +1,195 @@
+/* Basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #2f0158; /* Dark purple background */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.top-navbar {
+    width: 100%;
+    background-color: #1e003d;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Advices Section */
+#advices {
+    padding: 60px 20px 20px;
+    color: white;
+    text-align: center;
+}
+
+#advices h3 {
+    font-size: 20px;
+    color: #ffd700;
+}
+
+/* Advice Cards */
+.advice-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.advice-card {
+    margin-top: 10px; 
+    padding: 10px; /* Adjust padding */
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: transparent; /* Remove background color */
+}
+
+
+
+.advice-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Bottom Navigation Bar */
+.bottom-navbar {
+    height: 60px;
+    background-color: #1e003d;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.nav-item p {
+    font-size: 14px;
+    color: #d3d3d3;
+}
+
+
+/* Force 3 cards per row for mobile screens */
+@media (max-width: 600px) {
+    .advice-cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row even on small screens */
+        gap: 10px; /* Reduce gap for small screens */
+    }
+
+    .advice-card {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .advice-image {
+        height: 80px; /* Adjust image height for smaller screens */
+    }
+
+    .navbar p {
+        font-size: 12px; /* Smaller font for bottom navbar on phones */
+    }
+}
+
+@media (max-width: 992px){
+    .advice-cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row even on small screens */
+        gap: 10px; /* Reduce gap for small screens */
+    }
+
+    .advice-card {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .advice-image {
+        height: 190px; /* Adjust image height for smaller screens */
+    }
+
+    .navbar p {
+        font-size: 12px; /* Smaller font for bottom navbar on phones */
+    }
+}
+
+@media (max-width: 768px) {
+    .advice-cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row even on small screens */
+        gap: 10px; /* Reduce gap for small screens */
+    }
+
+    .advice-card {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .advice-image {
+        height: 180px; /* Adjust image height for smaller screens */
+    }
+
+    .navbar p {
+        font-size: 12px; /* Smaller font for bottom navbar on phones */
+    }
+}
+
+@media (max-width: 576px) {
+    .advice-cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row even on small screens */
+        gap: 10px; /* Reduce gap for small screens */
+    }
+
+    .advice-card {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .advice-image {
+        height: 100px; /* Adjust image height for smaller screens */
+    }
+
+    .navbar p {
+        font-size: 12px; /* Smaller font for bottom navbar on phones */
+    }
+}
+@media (max-width: 400px){
+    .advice-cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row even on small screens */
+        gap: 4px; /* Reduce gap for small screens */
+    }
+
+    .advice-card {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .advice-image {
+        height: 85px; /* Adjust image height for smaller screens */
+    }
+
+    .navbar p {
+        font-size: 12px; /* Smaller font for bottom navbar on phones */
+    }
+}

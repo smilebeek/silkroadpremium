@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #2f0158;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 350px;
+    text-align: center;
+    margin-top: 60px; /* Adjust margin to make space for the fixed header */
+    margin-bottom: 60px; /* Adjust margin to make space for the fixed navbar */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Distribute space between logo and icons */
+    align-items: center;
+    padding: 10px 20px; /* Add padding to the sides to push content inward */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1e003d;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.icons {
+    display: flex;
+    gap: 15px; /* Increase space between icons */
+}
+
+.icon {
+    font-size: 22px;
+}
+.icon:hover {
+    cursor: pointer;
+}
+
+.search-bar {
+    background: none; /* Remove previous background */
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #FFD700; /* Yellow border */
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+}
+
+.search-icon {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.search-item input[type="text"],
+.search-item input[type="date"],
+.search-item select {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    max-width: 100%;
+}
+
+.search-item select {
+    width: auto; /* Allow dropdown to shrink */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.search-button {
+    background-color: #0071c2; /* Blue color for search button */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search-button:hover {
+    background-color: #005fa3;
+}
+
+.winner-section {
+    
+    border-radius: 5px;
+    padding: 8px;
+    
+}
+
+.winner-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.hotel-card {
+    background: linear-gradient(135deg,  #085078, #9709b4 );
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.hotel-image img {
+    width: 160px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.hotel-info {
+    margin-left: 15px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.hotel-info h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.hotel-info p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #FFD700; /* Gold color for stars */
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    
+    gap: 10px;
+}
+
+.status-btn{
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.status-btn {
+    background: #005fa3;
+    color: white;
+}
+
+.status-btn:hover {
+    background: #005591;
+}
+
+
+
+/* Navbar positioned at the bottom */
+.bottom-navbar {
+    height: 60px;
+    background-color: #1e003d;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.nav-item p {
+    font-size: 14px;
+    color: #d3d3d3;
+}

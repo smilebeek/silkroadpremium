@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Plaza Hotel</title>
+    <link rel="stylesheet" href="css/alpha.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="top-navbar">
+        <div class="logo">
+            <h1>Silk Road Premium</h1>
+        </div>
+    </header>
+
+    <!-- Main Sections: About and Rooms -->
+    <div class="main-content">
+        <!-- Hotel Image -->
+        <div class="hotel-image-container">
+            <img src="silkroad1.jpg" alt="Hotel Image" class="hotel-image">
+        </div>
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>Welcome</h2>
+            <p>Experience luxury, comfort, and style at Silk Road Premium. Our rooms are designed to provide a serene and relaxing atmosphere with modern amenities to make your stay unforgettable.</p>
+            <p>Enjoy world-class services, from our exquisite spa and wellness center to our rooftop pool with breathtaking views.</p>
+        </section>
+
+        <!-- Rooms Section -->
+        <section id="rooms">
+            <h2>Our Rooms</h2>
+
+            <!-- Room Card: Standard Double -->
+
+            <div class="room-card">
+                <h3>Double Room</h3>
+                <div class="room-layout">
+                    <div class="large-image">
+                        <img src="double1.jpg" alt="Standard Double Room Image 1" onclick="openModal(this)">
+                    </div>
+                    <div class="small-images">
+                        <img src="double2.jpg" alt="Standard Double Room Image 2" onclick="openModal(this)">
+                        <img src="doubel3.jpg" alt="Standard Double Room Image 3" onclick="openModal(this)">
+                    </div>
+                </div>
+                <div class="room-description">
+                    <p>The Standard Double room offers a spacious, elegant environment with modern decor. Perfect for couples or solo travelers, it features a king-sized bed, a private bathroom, and complimentary Wi-Fi.</p>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <h3>Twin Room</h3>
+                <div class="room-layout">
+                    <div class="large-image">
+                        <img src="twin1.jpg" alt="Standard Double Room Image 1" onclick="openModal(this)">
+                    </div>
+                    <div class="small-images">
+                        <img src="twin2.jpg" alt="Standard Double Room Image 2" onclick="openModal(this)">
+                        <img src="twin3.jpg " alt="Standard Double Room Image 3" onclick="openModal(this)">
+                    </div>
+                </div>
+                <div class="room-description">
+                    <p>The Standard Double room offers a spacious, elegant environment with modern decor. Perfect for couples or solo travelers, it features a king-sized bed, a private bathroom, and complimentary Wi-Fi.</p>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <h3>Delux Room</h3>
+                <div class="room-layout">
+                    <div class="large-image">
+                        <img src="delux1.jpg" alt="Standard Double Room Image 1" onclick="openModal(this)">
+                    </div>
+                    <div class="small-images">
+                        <img src="double1.jpg" alt="Standard Double Room Image 2" onclick="openModal(this)">
+                        <img src="double2.jpg" alt="Standard Double Room Image 3" onclick="openModal(this)">
+                    </div>
+                </div>
+                <div class="room-description">
+                    <p>The Standard Double room offers a spacious, elegant environment with modern decor. Perfect for couples or solo travelers, it features a king-sized bed, a private bathroom, and complimentary Wi-Fi.</p>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <h3>Lux Room</h3>
+                <div class="room-layout">
+                    <div class="large-image">
+                        <img src="lux1.jpg" alt="Standard Double Room Image 1" onclick="openModal(this)">
+                    </div>
+                    <div class="small-images">
+                        <img src="lux2.jpg" alt="Standard Double Room Image 2" onclick="openModal(this)">
+                        <img src="double2.jpg" alt="Standard Double Room Image 3" onclick="openModal(this)">
+                    </div>
+                </div>
+                <div class="room-description">
+                    <p>The Standard Double room offers a spacious, elegant environment with modern decor. Perfect for couples or solo travelers, it features a king-sized bed, a private bathroom, and complimentary Wi-Fi.</p>
+                </div>
+            </div>
+
+            <!-- Add more room cards as needed -->
+        </section>
+
+        <!-- Map Section -->
+        <section id="map">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.2544172844355!2d69.27891597656303!3d41.30332860120418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b180760831f%3A0xca46e5ba4fe9a01c!2sAlpha%20plaza!5e0!3m2!1sen!2s!4v1728601714094!5m2!1sen!2s" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Modal for Full-Screen Image -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <footer class="bottom-navbar">
+        <div class="navbar">
+            <a href="main.html">
+                <div class="nav-item">
+                    <p>Booking</p>
+                </div>
+            </a>
+            <a href="alpha.html">
+                <div class="nav-item">
+                    <p>About Us</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="nav-item">
+                    <p>Traveling</p>
+                </div>
+            </a>
+            <a href="advices.html">
+                <div class="nav-item">
+                    <p>Advices</p>
+                </div>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(imgElement) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #2f0158; /* Dark background, consistent with alpha.html */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.top-navbar {
+    width: 100%;
+    background-color: #1e003d;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Partners section */
+#partners {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 80px 20px 40px 20px; /* Increased bottom padding */
+    margin: 0 auto;
+}
+
+
+#partners h1 {
+    font-size: 48px;
+    color: #ffd700;
+}
+
+/* Hotel cards container */
+.hotel-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 hotel cards per row */
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 40px; /* Extra space to avoid overlapping with the navbar */
+}
+
+.hotel-cards-container a{
+    text-decoration: none;
+}
+
+/* Hotel card styles */
+.hotel-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.hotel-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.hotel-card h3 {
+    font-size: 18px;
+    color: #2f0158;
+}
+
+/* Bottom Navigation Bar */
+.bottom-navbar {
+    height: 60px;
+    background-color: #1e003d;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.nav-item p {
+    font-size: 14px;
+    color: #d3d3d3;
+}
+
+/* Mobile responsiveness - Keep 3 cards per row */
+@media (max-width: 600px) {
+    .hotel-cards-container {
+        grid-template-columns: repeat(3, 1fr); /* Ensures 3 hotel cards per row, even on mobile */
+        gap: 10px;
+    }
+
+    .hotel-card {
+        max-width: 100px; /* Adjust card size for mobile */
+    }
+
+    .hotel-card img {
+        height: 80px; /* Adjust image height for smaller cards */
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+}

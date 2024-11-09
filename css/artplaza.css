@@ -1,0 +1,242 @@
+/* Basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Modern font for a clean look */
+}
+
+body {
+    background-color: #2f0158; /* Dark purple for luxurious feel */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.top-navbar {
+    width: 100%;
+    background-color: #1e003d;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    color: white;
+    padding-bottom: 80px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.hotel-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hotel-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Section Styles */
+#about {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#rooms {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+/* Room Card */
+.room-card {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1e003d;
+    border-radius: 10px;
+    border: 1px solid #ffd700;
+}
+
+.room-layout {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.large-image {
+    width: 66%;
+}
+
+.large-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 33%;
+}
+
+.small-images img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Modal Styles for Full-Screen Image */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Google Map */
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* Bottom Navigation */
+.bottom-navbar {
+    height: 60px;
+    background-color: #1e003d;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.nav-item p {
+    font-size: 14px;
+    color: #d3d3d3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+    
+    /* Adjusting room layout for mobile */
+    .room-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .large-image,
+    .small-images {
+        width: 100%;
+    }
+
+    .small-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .small-images img {
+        width: 48%; /* Adjust to fit two images side by side */
+        border-radius: 10px;
+    }
+
+    .room-description {
+        text-align: center;
+    }
+
+    .hotel-image {
+        width: 100%;
+        height: auto;
+    }
+}
